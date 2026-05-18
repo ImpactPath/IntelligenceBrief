@@ -48,18 +48,17 @@
 
   /* ── THEME TOGGLE ── */
   #theme-toggle {
-    position: fixed; top: 16px; right: 20px; z-index: 300;
-    width: 44px; height: 44px; border-radius: 50%;
-    border: 1.5px solid rgba(255,255,255,0.25);
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(10px);
-    cursor: pointer; font-size: 20px;
+    flex-shrink: 0; margin-left: auto; margin-right: 16px;
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--bg);
+    cursor: pointer; font-size: 17px;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.25);
-    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    transition: transform .2s, box-shadow .2s, background .3s;
   }
-  #theme-toggle:hover { transform: scale(1.12); box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
-  [data-theme="dark"] #theme-toggle { background: rgba(30,41,59,0.85); border-color: #334155; }
+  #theme-toggle:hover { transform: scale(1.1); box-shadow: 0 3px 12px rgba(0,0,0,0.2); }
+  [data-theme="dark"] #theme-toggle { background: #0B1120; border-color: #334155; }
 
   /* ── HERO HEADER ── */
   header {
@@ -138,16 +137,10 @@
     position: sticky; top: 4px; z-index: 100;
     background: var(--card); border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+    display: flex; align-items: center;
     transition: background .3s, border-color .3s, box-shadow .3s;
   }
-  .nav-wrap::after {
-    content: '';
-    position: absolute; right: 0; top: 0; bottom: 0; width: 48px;
-    background: linear-gradient(to right, transparent, var(--card));
-    pointer-events: none; z-index: 1;
-    transition: background .3s;
-  }
-  [data-theme="dark"] .nav-wrap::after { background: linear-gradient(to right, transparent, #1E293B); }
+  /* nav fade hint removed — toggle now anchors right edge */
   nav {
     background: transparent; border-bottom: none;
     padding: 0 60px; display: flex; gap: 2px;
@@ -625,10 +618,6 @@
 
 <div id="progress-bar"></div>
 
-<button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 모드 전환">
-  <span id="theme-icon">🌙</span>
-</button>
-
 <!-- ── HERO HEADER (①) ── -->
 <header>
   <div class="hero-glow-1"></div>
@@ -664,6 +653,7 @@
 <!-- ── NAV (⑨) ── -->
 <div class="nav-wrap">
 <nav id="main-nav">
+
   <a href="#geo"     class="geo"  data-section="geo"><span class="nav-icon">🌐</span><span class="nav-text"> 지정학</span></a>
   <a href="#mac"     class="mac"  data-section="mac"><span class="nav-icon">💰</span><span class="nav-text"> 거시경제</span></a>
   <a href="#cli"     class="cli"  data-section="cli"><span class="nav-icon">🌍</span><span class="nav-text"> 기후변화</span></a>
@@ -674,6 +664,9 @@
   <a href="#videos"              data-section="videos"><span class="nav-icon">📺</span><span class="nav-text"> 추천 영상</span></a>
   <a href="#sources"             data-section="sources"><span class="nav-icon">📎</span><span class="nav-text"> 출처</span></a>
 </nav>
+<button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 모드 전환">
+  <span id="theme-icon">🌙</span>
+</button>
 </div>
 
 <main>
