@@ -47,18 +47,19 @@
   }
 
   /* ── THEME TOGGLE ── */
+  /* ── THEME TOGGLE ── */
   #theme-toggle {
-    flex-shrink: 0; margin-left: auto; margin-right: 16px;
-    width: 36px; height: 36px; border-radius: 50%;
-    border: 1.5px solid var(--border);
-    background: var(--bg);
-    cursor: pointer; font-size: 17px;
+    position: absolute; top: 16px; right: 20px; z-index: 10;
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    cursor: pointer; font-size: 18px;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
-    transition: transform .2s, box-shadow .2s, background .3s;
+    transition: transform .2s;
   }
-  #theme-toggle:hover { transform: scale(1.1); box-shadow: 0 3px 12px rgba(0,0,0,0.2); }
-  [data-theme="dark"] #theme-toggle { background: #0B1120; border-color: #334155; }
+  #theme-toggle:hover { transform: scale(1.1); }
+  [data-theme="dark"] #theme-toggle { background: rgba(30,41,59,0.7); border-color: rgba(255,255,255,0.15); }
 
   /* ── HERO HEADER ── */
   header {
@@ -137,17 +138,15 @@
     position: sticky; top: 4px; z-index: 100;
     background: var(--card); border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 14px rgba(0,0,0,0.06);
-    display: flex; align-items: center;
     transition: background .3s, border-color .3s, box-shadow .3s;
   }
   /* nav fade hint removed — toggle now anchors right edge */
   nav {
-    background: transparent; border-bottom: none;
+    background: var(--card); border-bottom: 1px solid var(--border);
     padding: 0 60px; display: flex; gap: 2px;
     overflow-x: auto; position: static;
-    box-shadow: none;
     scrollbar-width: none;
-    transition: none;
+    transition: background .3s, border-color .3s;
   }
   nav::-webkit-scrollbar { display: none; }
   nav a {
@@ -540,6 +539,7 @@
 
   /* ── DARK MODE OVERRIDES ── */
   [data-theme="dark"] .nav-wrap { background: #1E293B; border-bottom-color: #334155; box-shadow: 0 2px 14px rgba(0,0,0,0.35); }
+  [data-theme="dark"] nav { background: #1E293B; border-bottom-color: #334155; }
   [data-theme="dark"] nav a       { color: #E2E8F0; }
   [data-theme="dark"] nav a.geo   { color: #60A5FA; }
   [data-theme="dark"] nav a.mac   { color: #A78BFA; }
@@ -583,12 +583,13 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 640px) {
     header { padding: 20px 20px 28px; }
+    #theme-toggle { top: auto; bottom: 16px; right: 16px; }
     header h1 { font-size: 32px; }
     .hero-title-row { flex-direction: column; align-items: flex-start; gap: 16px; }
     .hero-stats { gap: 16px; flex-wrap: wrap; }
     .hero-stat-num { font-size: 30px; }
     .hero-stat-label { font-size: 10px; }
-    nav { padding: 0 8px; }
+    nav { padding: 0 4px 0 12px; }
     nav a { padding: 12px 10px; font-size: 20px; }
     .nav-text { display: none; }
     .nav-wrap::after { width: 0; }
@@ -605,8 +606,9 @@
   /* ── TABLET (641px ~ 900px) ── */
   @media (min-width: 641px) and (max-width: 900px) {
     header { padding: 24px 32px 36px; }
-    .hero-title-row { gap: clamp(20px, 4vw, 90px); }
-    .hero-stat-num { font-size: 34px; }
+    .hero-title-row { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .hero-stats { gap: 24px; }
+    .hero-stat-num { font-size: 36px; }
     main, .main-lower { padding-left: 24px; padding-right: 24px; }
     .card-header { padding: 24px 28px; }
     .domain-label-en { font-size: 44px; }
@@ -620,6 +622,9 @@
 
 <!-- ── HERO HEADER (①) ── -->
 <header>
+  <button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 모드 전환">
+    <span id="theme-icon">🌙</span>
+  </button>
   <div class="hero-glow-1"></div>
   <div class="hero-glow-2"></div>
   <div class="hero-glow-3"></div>
@@ -664,9 +669,6 @@
   <a href="#videos"              data-section="videos"><span class="nav-icon">📺</span><span class="nav-text"> 추천 영상</span></a>
   <a href="#sources"             data-section="sources"><span class="nav-icon">📎</span><span class="nav-text"> 출처</span></a>
 </nav>
-<button id="theme-toggle" onclick="toggleTheme()" title="다크/라이트 모드 전환">
-  <span id="theme-icon">🌙</span>
-</button>
 </div>
 
 <main>
