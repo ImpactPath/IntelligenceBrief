@@ -67,25 +67,25 @@
     display: flex; flex-direction: column; justify-content: flex-end;
     padding: 24px 60px 36px;
     overflow: hidden;
-    background: #0B1628;
+    background: #0A2018;
   }
   .hero-glow-1 {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 65% 80% at 15% 65%, rgba(37,99,235,0.28) 0%, transparent 65%);
+    background: radial-gradient(ellipse 65% 80% at 15% 65%, rgba(130,205,160,0.22) 0%, transparent 65%);
   }
   .hero-glow-2 {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 55% 65% at 88% 25%, rgba(124,58,237,0.18) 0%, transparent 60%);
+    background: radial-gradient(ellipse 55% 65% at 88% 25%, rgba(61,171,142,0.14) 0%, transparent 60%);
   }
   .hero-glow-3 {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 40% 40% at 55% 90%, rgba(220,38,38,0.08) 0%, transparent 55%);
+    background: radial-gradient(ellipse 40% 40% at 55% 90%, rgba(45,122,95,0.10) 0%, transparent 55%);
   }
   .hero-grid {
     position: absolute; inset: 0; pointer-events: none;
     background-image:
-      linear-gradient(rgba(99,102,241,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(99,102,241,0.07) 1px, transparent 1px);
+      linear-gradient(rgba(61,171,142,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(61,171,142,0.07) 1px, transparent 1px);
     background-size: 56px 56px;
   }
   .hero-content { position: relative; z-index: 2; }
@@ -95,7 +95,7 @@
   }
   .hero-eyebrow {
     font-size: 13px; font-weight: 700; letter-spacing: 3px;
-    text-transform: uppercase; color: #60A5FA;
+    text-transform: uppercase; color: #6EE7B7;
     margin-bottom: 18px;
     display: flex; align-items: center; gap: 14px;
   }
@@ -124,9 +124,9 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 42px; line-height: 1; color: #fff;
   }
-  .hero-stat-num.s-blue   { color: #60A5FA; }
-  .hero-stat-num.s-purple { color: #A78BFA; }
-  .hero-stat-num.s-red    { color: #F87171; }
+  .hero-stat-num.s-blue   { color: #6EE7B7; }
+  .hero-stat-num.s-purple { color: #4ADE80; }
+  .hero-stat-num.s-red    { color: #86EFAC; }
   .hero-stat-num.s-green  { color: #34D399; }
   .hero-stat-label {
     font-size: 12px; color: rgba(255,255,255,0.65);
@@ -212,23 +212,22 @@
 
   /* ── COLOURED CARD HEADERS (③) ── */
   .card-header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 28px 36px; position: relative; overflow: hidden; color: #fff;
+    display: flex; align-items: center;
+    padding: 14px 28px; position: relative; overflow: hidden; color: #fff;
   }
-  .card-header-inner { position: relative; z-index: 1; }
-  .domain-label-en {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 52px; line-height: 1; letter-spacing: 0.03em;
-    color: rgba(255,255,255,0.92);
+  .card-header-inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: baseline; gap: 12px;
   }
   .domain-label-kr {
-    font-size: 16px; font-weight: 700;
-    color: rgba(255,255,255,0.6); margin-top: 4px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 22px; font-weight: 800; line-height: 1;
+    color: rgba(255,255,255,0.95);
   }
-  .header-icon {
-    font-size: 56px; opacity: 0.88;
-    position: relative; z-index: 1; flex-shrink: 0;
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+  .domain-label-en {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.5);
   }
   .domain-geo .card-header { background: linear-gradient(135deg, #1e3a5f 0%, #2563EB 100%); }
   .domain-mac .card-header { background: linear-gradient(135deg, #2d1b5e 0%, #7C3AED 100%); }
@@ -359,13 +358,13 @@
 
   /* ── DIALOGUE SECTION — DARK FULL-BLEED (⑤) ── */
   .dialogue-section {
-    background: #0B1628; padding: 64px 0;
+    background: #0A2018; padding: 64px 0;
     position: relative; overflow: hidden;
   }
-  [data-theme="dark"] .dialogue-section { background: #05080F; }
+  [data-theme="dark"] .dialogue-section { background: #060f0a; }
   .dialogue-glow {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 55% 70% at 85% 50%, rgba(124,58,237,0.14) 0%, transparent 65%);
+    background: radial-gradient(ellipse 55% 70% at 85% 50%, rgba(61,171,142,0.12) 0%, transparent 65%);
   }
   .dialogue-inner {
     max-width: 1000px; margin: 0 auto;
@@ -374,16 +373,16 @@
   .dialogue-heading {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 34px; letter-spacing: 0.06em;
-    color: #60A5FA; margin-bottom: 32px;
+    color: #6EE7B7; margin-bottom: 32px;
     display: flex; align-items: center; gap: 14px;
   }
   .dialogue-heading::after {
     content: ''; flex: 1; height: 1px;
-    background: linear-gradient(90deg, #1E3A5F, transparent);
+    background: linear-gradient(90deg, #14532D, transparent);
   }
 
   .cross-card {
-    border: 1px solid #1E3A5F; border-radius: 16px;
+    border: 1px solid #14532D; border-radius: 16px;
     overflow: hidden; margin-bottom: 24px;
     transition: transform .22s, box-shadow .22s;
   }
@@ -392,7 +391,7 @@
   .cross-header {
     display: flex; align-items: center; gap: 18px;
     padding: 20px 28px;
-    background: linear-gradient(90deg, #1E1B4B 0%, #312E81 100%);
+    background: linear-gradient(90deg, #0f3d28 0%, #1a5c47 100%);
     color: #fff;
   }
   .cross-num {
@@ -401,10 +400,10 @@
   }
   .cross-domain-label {
     font-size: 12px; font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; color: #A5B4FC; margin-bottom: 4px;
+    text-transform: uppercase; color: #6EE7B7; margin-bottom: 4px;
   }
   .cross-title { font-size: 18px; font-weight: 800; }
-  .cross-body { padding: 24px 28px; background: #0F1C30; }
+  .cross-body { padding: 24px 28px; background: #0d2a1e; }
   .cross-row { margin-bottom: 16px; }
   .cross-row:last-child { margin-bottom: 0; }
   .cr-label {
@@ -493,12 +492,12 @@
 
   /* ── FOOTER — DARK SIGNATURE (⑩) ── */
   footer {
-    background: #0B1628; padding: 64px 60px 52px;
+    background: #0A2018; padding: 64px 60px 52px;
     position: relative; overflow: hidden;
   }
   .footer-glow {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 45% 55% at 8% 85%, rgba(37,99,235,0.1) 0%, transparent 60%);
+    background: radial-gradient(ellipse 45% 55% at 8% 85%, rgba(130,205,160,0.10) 0%, transparent 60%);
   }
   .footer-inner { position: relative; z-index: 1; }
   .footer-logo {
@@ -506,23 +505,23 @@
     font-size: 42px; letter-spacing: 0.04em;
     color: rgba(255,255,255,0.88); margin-bottom: 4px;
   }
-  .footer-date-line { font-size: 14px; color: #475569; margin-bottom: 36px; }
+  .footer-date-line { font-size: 14px; color: #4a7a5a; margin-bottom: 36px; }
   .footer-topics-label {
     font-size: 12px; font-weight: 700; letter-spacing: 0.18em;
-    text-transform: uppercase; color: #60A5FA; margin-bottom: 16px;
+    text-transform: uppercase; color: #6EE7B7; margin-bottom: 16px;
   }
   .footer-topic {
     display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px;
   }
   .footer-topic-num {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px; line-height: 1; color: #1E3A5F; flex-shrink: 0; padding-top: 2px;
+    font-size: 28px; line-height: 1; color: #14532D; flex-shrink: 0; padding-top: 2px;
   }
-  .footer-topic-text { font-size: 16px; color: #94A3B8; line-height: 1.6; }
+  .footer-topic-text { font-size: 16px; color: #86EFAC; line-height: 1.6; }
   .footer-bottom {
     margin-top: 44px; padding-top: 24px;
-    border-top: 1px solid #1E293B;
-    font-size: 13px; color: #334155;
+    border-top: 1px solid #14532D;
+    font-size: 13px; color: #2d6b47;
   }
 
   /* ── SCROLL FADE-IN (②⑧) ── */
@@ -594,8 +593,8 @@
     .nav-text { display: none; }
     .nav-wrap::after { width: 0; }
     main, .main-lower { padding-left: 16px; padding-right: 16px; gap: 28px; }
-    .card-header { padding: 22px 20px; }
-    .domain-label-en { font-size: 38px; }
+    .card-header { padding: 12px 18px; }
+    .domain-label-kr { font-size: 18px; }
     .card-body { padding: 24px 20px; }
     .stat-section { padding: 18px 20px 24px; }
     .dialogue-section { padding: 44px 0; }
@@ -610,8 +609,7 @@
     .hero-stats { gap: 24px; }
     .hero-stat-num { font-size: 36px; }
     main, .main-lower { padding-left: 24px; padding-right: 24px; }
-    .card-header { padding: 24px 28px; }
-    .domain-label-en { font-size: 44px; }
+    .card-header { padding: 14px 24px; }
     footer { padding: 48px 32px 40px; }
   }
 </style>
@@ -687,10 +685,9 @@
   <div class="card domain-geo domain-card fade-in" id="geo" data-domain="geo">
     <div class="card-header">
       <div class="card-header-inner">
-        <div class="domain-label-en">Geopolitics</div>
         <div class="domain-label-kr">지정학</div>
+        <div class="domain-label-en">Geopolitics</div>
       </div>
-      <div class="header-icon">🌐</div>
     </div>
     <div class="card-body">
       <p>
@@ -728,10 +725,9 @@
   <div class="card domain-mac domain-card fade-in stagger-1" id="mac" data-domain="mac">
     <div class="card-header">
       <div class="card-header-inner">
-        <div class="domain-label-en">Macroeconomics</div>
         <div class="domain-label-kr">거시경제 &amp; 금융</div>
+        <div class="domain-label-en">Macroeconomics</div>
       </div>
-      <div class="header-icon">💰</div>
     </div>
     <div class="card-body">
       <p>
@@ -769,10 +765,9 @@
   <div class="card domain-cli domain-card fade-in stagger-2" id="cli" data-domain="cli">
     <div class="card-header">
       <div class="card-header-inner">
-        <div class="domain-label-en">Climate Change</div>
         <div class="domain-label-kr">기후변화</div>
+        <div class="domain-label-en">Climate Change</div>
       </div>
-      <div class="header-icon">🌍</div>
     </div>
     <div class="card-body">
       <p>
@@ -809,10 +804,9 @@
   <div class="card domain-grn domain-card fade-in stagger-3" id="grn" data-domain="grn">
     <div class="card-header">
       <div class="card-header-inner">
-        <div class="domain-label-en">Green Growth</div>
         <div class="domain-label-kr">녹색성장</div>
+        <div class="domain-label-en">Green Growth</div>
       </div>
-      <div class="header-icon">🌱</div>
     </div>
     <div class="card-body">
       <p>
@@ -849,10 +843,9 @@
   <div class="card domain-ai domain-card fade-in stagger-4" id="ai" data-domain="ai">
     <div class="card-header">
       <div class="card-header-inner">
-        <div class="domain-label-en">AI &amp; Technology</div>
         <div class="domain-label-kr">AI &amp; 기술</div>
+        <div class="domain-label-en">AI &amp; Technology</div>
       </div>
-      <div class="header-icon">🤖</div>
     </div>
     <div class="card-body">
       <p>
@@ -889,10 +882,9 @@
   <div class="card fade-in stagger-5" id="watch">
     <div class="card-header neutral">
       <div class="card-header-inner">
+        <div class="domain-label-kr">모니터링 아젠다</div>
         <div class="domain-label-en">Watch List</div>
-        <div class="domain-label-kr">모니터링 아젠다 업데이트</div>
       </div>
-      <div class="header-icon">📌</div>
     </div>
     <div class="card-body">
       <p style="font-size:15px; color:var(--muted); margin-bottom:22px;">항목을 클릭하면 세부 내용을 볼 수 있습니다.</p>
@@ -1072,10 +1064,9 @@
   <div class="card fade-in" id="videos">
     <div class="card-header neutral">
       <div class="card-header-inner">
+        <div class="domain-label-kr">추천 영상</div>
         <div class="domain-label-en">Video Picks</div>
-        <div class="domain-label-kr">이번 주 추천 영상</div>
       </div>
-      <div class="header-icon">📺</div>
     </div>
     <div class="card-body">
       <div class="video-section-label">신뢰 채널 추천</div>
@@ -1152,10 +1143,9 @@
   <div class="card fade-in" id="sources">
     <div class="card-header neutral">
       <div class="card-header-inner">
-        <div class="domain-label-en">Sources</div>
         <div class="domain-label-kr">주요 출처 (24건)</div>
+        <div class="domain-label-en">Sources</div>
       </div>
-      <div class="header-icon">📎</div>
     </div>
     <div class="card-body">
       <div class="source-filter-row">
