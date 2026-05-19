@@ -7,23 +7,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --geo:    #2563EB;
-    --mac:    #7C3AED;
-    --cli:    #059669;
-    --grn:    #16A34A;
-    --ai:     #DC2626;
-    --text:   #1A1A2E;
-    --muted:  #6B7280;
-    --bg:     #F1F5F9;
-    --card:   #FFFFFF;
-    --border: #E2E8F0;
+    --geo:    #3245C4;
+    --mac:    #6D3FC0;
+    --cli:    #047857;
+    --grn:    #15803D;
+    --ai:     #C2410C;
+    --text:   #1C1917;
+    --muted:  #6B6560;
+    --bg:     #F0E9DE;
+    --card:   #F7F1E8;
+    --border: #D5C9BB;
   }
   [data-theme="dark"] {
-    --text:   #E2E8F0;
-    --muted:  #94A3B8;
-    --bg:     #0B1120;
-    --card:   #1E293B;
-    --border: #334155;
+    --text:   #E8E0D5;
+    --muted:  #A09588;
+    --bg:     #0F1A20;
+    --card:   #162028;
+    --border: #243540;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,7 +41,7 @@
   #progress-bar {
     position: fixed; top: 0; left: 0;
     width: 0%; height: 4px;
-    background: linear-gradient(90deg, #1a5c47, #3dab8e, #4ADE80);
+    background: linear-gradient(90deg, #C2622A, #D97757, #3dab8e, #4ADE80);
     z-index: 9999; border-radius: 0 2px 2px 0;
     transition: width .1s linear;
   }
@@ -67,25 +67,25 @@
     display: flex; flex-direction: column; justify-content: flex-end;
     padding: 24px 60px 36px;
     overflow: hidden;
-    background: #0A2018;
+    background: #172E28;
   }
   .hero-glow-1 {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 65% 80% at 15% 65%, rgba(130,205,160,0.22) 0%, transparent 65%);
+    background: radial-gradient(ellipse 65% 80% at 15% 65%, rgba(80,180,150,0.22) 0%, transparent 65%);
   }
   .hero-glow-2 {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 55% 65% at 88% 25%, rgba(61,171,142,0.14) 0%, transparent 60%);
+    background: radial-gradient(ellipse 55% 65% at 88% 25%, rgba(50,140,120,0.14) 0%, transparent 60%);
   }
   .hero-glow-3 {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 40% 40% at 55% 90%, rgba(45,122,95,0.10) 0%, transparent 55%);
+    background: radial-gradient(ellipse 40% 40% at 55% 90%, rgba(40,110,90,0.10) 0%, transparent 55%);
   }
   .hero-grid {
     position: absolute; inset: 0; pointer-events: none;
     background-image:
-      linear-gradient(rgba(61,171,142,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(61,171,142,0.07) 1px, transparent 1px);
+      linear-gradient(rgba(80,160,140,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(80,160,140,0.06) 1px, transparent 1px);
     background-size: 56px 56px;
   }
   .hero-content { position: relative; z-index: 2; }
@@ -112,7 +112,7 @@
   }
   .hero-divider {
     width: 48px; height: 2px;
-    background: linear-gradient(90deg, var(--geo), var(--mac));
+    background: linear-gradient(90deg, #6EE7B7, #4ADE80);
     margin-bottom: 36px; border-radius: 2px;
   }
   .hero-stats {
@@ -230,12 +230,12 @@
     font-size: 15px; letter-spacing: 0.08em;
     color: rgba(255,255,255,0.5);
   }
-  .domain-geo .card-header { background: linear-gradient(135deg, #1e3a5f 0%, #2563EB 100%); }
-  .domain-mac .card-header { background: linear-gradient(135deg, #2d1b5e 0%, #7C3AED 100%); }
-  .domain-cli .card-header { background: linear-gradient(135deg, #064e3b 0%, #059669 100%); }
-  .domain-grn .card-header { background: linear-gradient(135deg, #052e16 0%, #16A34A 100%); }
-  .domain-ai  .card-header { background: linear-gradient(135deg, #450a0a 0%, #DC2626 100%); }
-  .card-header.neutral     { background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); }
+  .domain-geo .card-header { background: linear-gradient(135deg, #2A3A6A 0%, #5570B8 100%); }
+  .domain-mac .card-header { background: linear-gradient(135deg, #3A2468 0%, #7A5CC0 100%); }
+  .domain-cli .card-header { background: linear-gradient(135deg, #1A4535 0%, #3D8A65 100%); }
+  .domain-grn .card-header { background: linear-gradient(135deg, #1A3D22 0%, #4A8A55 100%); }
+  .domain-ai  .card-header { background: linear-gradient(135deg, #5C2010 0%, #C2622A 100%); }
+  .card-header.neutral     { background: linear-gradient(135deg, #0F1428 0%, #1A1F38 100%); }
 
   /* ── CARD BODY ── */
   .card-body { padding: 32px 36px; }
@@ -280,7 +280,7 @@
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
   .tag {
     font-size: 13px; font-weight: 600; padding: 4px 13px;
-    border-radius: 999px; background: #F1F5F9; color: #475569;
+    border-radius: 999px; background: #EDE8E1; color: #4A4540;
   }
   .tag.breaking { background: #FEF2F2; color: #DC2626; }
   .tag.emerging { background: #FFF7ED; color: #C2410C; }
@@ -290,7 +290,7 @@
   .label-interp {
     display: inline; font-size: 13px; font-weight: 700;
     padding: 3px 8px; border-radius: 4px;
-    background: #FEF9C3; color: #854D0E;
+    background: #FDE8D8; color: #9A3D1A;
     vertical-align: middle; margin-right: 5px;
   }
 
@@ -305,30 +305,15 @@
   /* ── WATCH LIST TIMELINE (⑥) ── */
   .watch-timeline {
     position: relative;
-    padding-left: 40px;
+    padding-left: 0;
     display: flex; flex-direction: column; gap: 10px;
-  }
-  .watch-timeline::before {
-    content: ''; position: absolute;
-    left: 9px; top: 14px; bottom: 14px;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--geo), var(--border), transparent);
   }
   .watch-item {
     position: relative; border-radius: 10px; overflow: hidden;
     transition: box-shadow .2s;
   }
-  .watch-item::before {
-    content: ''; position: absolute;
-    left: -33px; top: 17px;
-    width: 12px; height: 12px; border-radius: 50%;
-    border: 2.5px solid var(--card); background: #94A3B8;
-    box-shadow: 0 0 0 3px rgba(148,163,184,0.2); z-index: 1;
-  }
-  .watch-item.new::before     { background: var(--geo); box-shadow: 0 0 0 3px rgba(37,99,235,0.22); }
-  .watch-item.updated::before { background: var(--grn); box-shadow: 0 0 0 3px rgba(22,163,74,0.22); }
-  .watch-item.new     { background: #EFF6FF; border: 1px solid #BFDBFE; }
-  .watch-item.updated { background: #ECFDF5; border: 1px solid #A7F3D0; }
+  .watch-item.new     { background: #EEF0FA; border: 1px solid #C7CEED; }
+  .watch-item.updated { background: #ECFAF3; border: 1px solid #A7E8C8; }
   .watch-item:not(.new):not(.updated) { background: var(--card); border: 1px solid var(--border); }
   .watch-item:hover { box-shadow: 0 3px 14px rgba(0,0,0,0.09); }
 
@@ -359,14 +344,14 @@
 
   /* ── DIALOGUE SECTION — DARK FULL-BLEED (⑤) ── */
   .dialogue-section {
-    background: #0A2018; padding: 64px 0;
+    background: #172E28; padding: 64px 0;
     position: relative; overflow: hidden;
     scroll-margin-top: 72px;
   }
-  [data-theme="dark"] .dialogue-section { background: #060f0a; }
+  [data-theme="dark"] .dialogue-section { background: #140E0A; }
   .dialogue-glow {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 55% 70% at 85% 50%, rgba(61,171,142,0.12) 0%, transparent 65%);
+    background: radial-gradient(ellipse 55% 70% at 85% 50%, rgba(60,160,130,0.12) 0%, transparent 65%);
   }
   .dialogue-inner {
     max-width: 1000px; margin: 0 auto;
@@ -380,11 +365,11 @@
   }
   .dialogue-heading::after {
     content: ''; flex: 1; height: 1px;
-    background: linear-gradient(90deg, #14532D, transparent);
+    background: linear-gradient(90deg, #1E4A3A, transparent);
   }
 
   .cross-card {
-    border: 1px solid #14532D; border-radius: 16px;
+    border: 1px solid #1E4A3A; border-radius: 16px;
     overflow: hidden; margin-bottom: 24px;
     transition: transform .22s, box-shadow .22s;
   }
@@ -393,7 +378,7 @@
   .cross-header {
     display: flex; align-items: center; gap: 18px;
     padding: 20px 28px;
-    background: linear-gradient(90deg, #0f3d28 0%, #1a5c47 100%);
+    background: linear-gradient(90deg, #0F2E24 0%, #1E4A3A 100%);
     color: #fff;
   }
   .cross-num {
@@ -405,7 +390,7 @@
     text-transform: uppercase; color: #6EE7B7; margin-bottom: 4px;
   }
   .cross-title { font-size: 18px; font-weight: 800; }
-  .cross-body { padding: 24px 28px; background: #0d2a1e; }
+  .cross-body { padding: 24px 28px; background: #0F221C; }
   .cross-row { margin-bottom: 16px; }
   .cross-row:last-child { margin-bottom: 0; }
   .cr-label {
@@ -450,7 +435,7 @@
   .channel-badge {
     display: inline-block; font-size: 12px; font-weight: 700;
     padding: 2px 9px; border-radius: 4px;
-    background: #F1F5F9; color: #475569; margin-bottom: 5px;
+    background: #EDE8E1; color: #4A4540; margin-bottom: 5px;
   }
   .video-section-label {
     font-family: 'Bebas Neue', sans-serif;
@@ -494,12 +479,12 @@
 
   /* ── FOOTER — DARK SIGNATURE (⑩) ── */
   footer {
-    background: #0A2018; padding: 64px 60px 52px;
+    background: #172E28; padding: 64px 60px 52px;
     position: relative; overflow: hidden;
   }
   .footer-glow {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 45% 55% at 8% 85%, rgba(130,205,160,0.10) 0%, transparent 60%);
+    background: radial-gradient(ellipse 45% 55% at 8% 85%, rgba(80,180,150,0.12) 0%, transparent 60%);
   }
   .footer-inner { position: relative; z-index: 1; }
   .footer-logo {
@@ -507,7 +492,7 @@
     font-size: 42px; letter-spacing: 0.04em;
     color: rgba(255,255,255,0.88); margin-bottom: 4px;
   }
-  .footer-date-line { font-size: 14px; color: #4a7a5a; margin-bottom: 36px; }
+  .footer-date-line { font-size: 14px; color: #4A7A6A; margin-bottom: 36px; }
   .footer-topics-label {
     font-size: 12px; font-weight: 700; letter-spacing: 0.18em;
     text-transform: uppercase; color: #6EE7B7; margin-bottom: 16px;
@@ -517,13 +502,13 @@
   }
   .footer-topic-num {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px; line-height: 1; color: #14532D; flex-shrink: 0; padding-top: 2px;
+    font-size: 28px; line-height: 1; color: #1E4A3A; flex-shrink: 0; padding-top: 2px;
   }
-  .footer-topic-text { font-size: 16px; color: #86EFAC; line-height: 1.6; }
+  .footer-topic-text { font-size: 16px; color: #A8CEC4; line-height: 1.6; }
   .footer-bottom {
     margin-top: 44px; padding-top: 24px;
-    border-top: 1px solid #14532D;
-    font-size: 13px; color: #2d6b47;
+    border-top: 1px solid #1E4A3A;
+    font-size: 13px; color: #3A6858;
   }
 
   /* ── SCROLL FADE-IN (②⑧) ── */
@@ -556,10 +541,8 @@
   [data-theme="dark"] .tag.breaking { background: #450a0a; color: #FCA5A5; }
   [data-theme="dark"] .tag.emerging { background: #431407; color: #FED7AA; }
   [data-theme="dark"] .tag.ongoing  { background: #052e16; color: #86EFAC; }
-  [data-theme="dark"] .label-interp { background: #3f2d00; color: #FDE68A; }
+  [data-theme="dark"] .label-interp { background: #4A1F0E; color: #F4A87A; }
   [data-theme="dark"] .section-title { color: #475569; border-bottom-color: #334155; }
-  [data-theme="dark"] .watch-timeline::before { background: linear-gradient(to bottom, #3B82F6, #334155, transparent); }
-  [data-theme="dark"] .watch-item::before { border-color: #1E293B; }
   [data-theme="dark"] .watch-item:not(.new):not(.updated) { background: #1E293B; border-color: #334155; }
   [data-theme="dark"] .watch-item.new     { background: #1a2d45; border-color: #2563EB44; }
   [data-theme="dark"] .watch-item.updated { background: #1a2e24; border-color: #16A34A44; }
@@ -570,7 +553,7 @@
   [data-theme="dark"] .badge-break  { background: #450a0a; color: #FCA5A5; }
   [data-theme="dark"] .video-item  { background: #1E293B; border-color: #334155; color: #E2E8F0; }
   [data-theme="dark"] .video-item:hover { border-color: #60A5FA; }
-  [data-theme="dark"] .channel-badge { background: #334155; color: #CBD5E1; }
+  [data-theme="dark"] .channel-badge { background: #2D2520; color: #C4BAB3; }
   [data-theme="dark"] .video-rel { color: #94A3B8; }
   [data-theme="dark"] .video-section-label { color: #475569; border-bottom-color: #334155; }
   [data-theme="dark"] th { background: #0B1120; color: #475569; }
@@ -710,7 +693,7 @@
         (<a href="https://moderndiplomacy.eu/2026/05/14/global-south-2-0-why-emerging-powers-are-rejecting-western-alignment/" target="_blank">Modern Diplomacy, 2026-05-14</a>).
       </p>
       <div class="tags">
-        <span class="tag breaking">#속보</span>
+        <span class="tag breaking">#긴급</span>
         <span class="tag">#미국</span><span class="tag">#중국</span><span class="tag">#글로벌사우스</span>
         <span class="tag">#BRICS</span><span class="tag">#전략적안정</span><span class="tag">#타이완</span><span class="tag">#AI반도체</span>
       </div>
@@ -750,7 +733,7 @@
         (<a href="https://www.imf.org/en/publications/weo/issues/2026/04/14/world-economic-outlook-april-2026" target="_blank">IMF WEO, 2026-04-14</a>).
       </p>
       <div class="tags">
-        <span class="tag breaking">#속보</span>
+        <span class="tag breaking">#긴급</span>
         <span class="tag">#미국</span><span class="tag">#중국</span><span class="tag">#관세</span>
         <span class="tag">#관리된무역</span><span class="tag">#비관세장벽</span><span class="tag">#IMF</span><span class="tag">#무역파편화</span>
       </div>
@@ -867,7 +850,7 @@
         (<a href="https://www.iea.org/reports/electricity-2026" target="_blank">IEA Electricity 2026</a>).
       </p>
       <div class="tags">
-        <span class="tag breaking">#속보</span>
+        <span class="tag breaking">#긴급</span>
         <span class="tag">#미국</span><span class="tag">#중국</span><span class="tag">#반도체</span>
         <span class="tag">#Nvidia</span><span class="tag">#AI에너지</span><span class="tag">#데이터센터</span><span class="tag">#수출통제</span>
       </div>
@@ -895,7 +878,7 @@
         <div class="watch-item new">
           <button class="watch-toggle" onclick="toggleWatch(this)">
             <span class="wi-icon">🆕</span>
-            <span class="wi-title">트럼프-시 "전략적 안정" 프레임워크 <span class="badge badge-new">신규</span><span class="badge badge-break">속보</span></span>
+            <span class="wi-title">트럼프-시 "전략적 안정" 프레임워크 <span class="badge badge-new">신규</span><span class="badge badge-break">긴급</span></span>
             <span class="watch-chevron">▼</span>
           </button>
           <div class="watch-body">3년 프레임워크의 실질 이행 여부 추적. 9월 시 주석 미국 방문 계획 및 "Board of Trade" 메커니즘 구체화 여부 모니터링</div>
@@ -913,7 +896,7 @@
         <div class="watch-item updated">
           <button class="watch-toggle" onclick="toggleWatch(this)">
             <span class="wi-icon">⬆️</span>
-            <span class="wi-title">미·중 반도체 수출통제 — H200 조건부 허가 <span class="badge badge-update">업데이트</span><span class="badge badge-break">속보</span></span>
+            <span class="wi-title">미·중 반도체 수출통제 — H200 조건부 허가 <span class="badge badge-update">업데이트</span><span class="badge badge-break">긴급</span></span>
             <span class="watch-chevron">▼</span>
           </button>
           <div class="watch-body">10개 중국 기업 허가 완료. 납품 지연 및 법적 불확실성 지속. Blackwell 시리즈 통제 유지. 베이징 정상회담 이후 추가 완화 여부 추적 필요</div>
@@ -1013,7 +996,7 @@
           </div>
         </div>
         <div class="tags cross-tags" style="margin-top:0">
-          <span class="tag breaking">#속보</span>
+          <span class="tag breaking">#긴급</span>
           <span class="tag">#관리된무역</span><span class="tag">#수출통제</span>
           <span class="tag">#AI반도체</span><span class="tag">#전략적디커플링</span>
           <span class="tag">#미국</span><span class="tag">#중국</span>
